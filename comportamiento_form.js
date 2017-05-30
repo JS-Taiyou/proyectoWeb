@@ -1,6 +1,11 @@
 
 indice = 0;
+
+
+
+
 $(document).ready(function(){
+    $("#buscar").hide();
     $("#1").click(function(){
         $("#alergia").show();
     });
@@ -30,7 +35,22 @@ $(document).ready(function(){
             $("#hipert").hide();
             $("#asma").show();
         }
+    });
+
+    $("#reg").click(function () {
+        if(this.checked){
+            $(".pagina0").children().hide();
+            $("#siguiente").hide();
+            $("#r").show();
+            $("#curp").show();
+            $("#buscar").show();
+        }else{
+            $(".pagina0").children().show();
+            $("#buscar").hide();
+            $("#siguiente").show();
+        }
     })
+
 
 });
 

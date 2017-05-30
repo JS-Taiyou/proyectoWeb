@@ -28,14 +28,21 @@
 
 
                 <fieldset class="form-group pagina0">
+                    <div class="input-group" id="r">
+                            <label class="radio-inline"><input type="checkbox" name="registrado" id="reg" value="true">Ya estoy registrado</label>
+                    </div>
                     <label for="nombre">Nombre Completo</label>
                     <div class="input-group">
                         <input pattern="[A-ZÁÉÍÓÚÑ\s]+" type="text" class="form-control" id="nombre" name="nombre">
                     </div>
-                    <label for="curp">CURP</label>
-                    <div class="input-group">
-                        <input id="curp" name="curp" class="form-control" pattern="[A-Z]{4}[0-9]{6}[A-Z]{6}[0-9]{2}" type="text">
+                    <div id="curp">
+                        <label for="curp">CURP</label>
+                        <div class="input-group">
+                            <input id="curp" name="curp" class="form-control" pattern="[A-Z]{4}[0-9]{6}[A-Z]{6}[0-9]{2}" type="text">
+                            <button class="btn btn-primary pull-right" id="buscar">Buscar</button>
+                        </div>
                     </div>
+
                     <label>Sexo</label>
                     <div class="input-group">
                         <div class="radio">
