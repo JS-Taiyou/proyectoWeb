@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Formulario</title>
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.css">
-    <link rel="stylesheet" href="estilos_form.css">
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="container">
@@ -355,15 +363,16 @@
 
 
                 <fieldset class="form-group pagina1 hidden">
-                    <label for="enf">Alergia a Medicamentos:</label>
+                    <label for="enf">Alergia a Medicamentos:</label><br>
                     <div class="input-group">
                         <div class="radio">
-                            <label class="radio-inline"><input type="radio" name="aler">Sí</label>
+                            <label class="radio-inline"><input type="radio" name="alerg" id="1">Sí</label>
                         </div>
                         <div class="radio">
-                            <label class="radio-inline"><input type="radio" name="aler">No</label>
+                            <label class="radio-inline"><input type="radio" name="alerg" id="0">No</label>
                         </div>
                     </div>
+                    <div id="alergia" style="display:none"><input type="text" placeholder="Favor de indicar alergias" name="alerg"></div>
 
                     <label for="enf">Enfermedad:</label>
                     <div class="input-group">

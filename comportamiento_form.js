@@ -1,6 +1,13 @@
 
 indice = 0;
-
+$(document).ready(function(){
+    $("#1").click(function(){
+        $("#alergia").show();
+    });
+    $("#0").click(function(){
+        $("#alergia").hide();
+    });
+});
 
 $("#siguiente").click(function(){
     if(indice >= 0 && indice <=1){
