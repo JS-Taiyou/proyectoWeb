@@ -9,13 +9,17 @@
             crossorigin="anonymous"></script>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="container">
@@ -24,21 +28,27 @@
             <h2 id="titulo">Datos Generales</h2>
         </div>
         <div class="panel-body">
-            <form id="formulario" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" novalidate>
+            <form id="formulario" novalidate>
 
 
                 <fieldset class="form-group pagina0">
                     <div class="input-group" id="r">
-                            <label class="radio-inline"><input type="checkbox" name="registrado" id="reg" value="true">Ya estoy registrado</label>
+                        <label class="radio-inline"><input type="checkbox" name="registrado" id="reg" value="true">Ya
+                            estoy registrado</label>
                     </div>
-                    <label for="nombre">Nombre Completo</label>
+                    <label for="nombre">Nombre</label>
                     <div class="input-group">
                         <input pattern="[A-ZÁÉÍÓÚÑ\s]+" type="text" class="form-control" id="nombre" name="nombre">
+                    </div>
+                    <label for="apellido">Apellido</label>
+                    <div class="input-group">
+                        <input pattern="[A-ZÁÉÍÓÚÑ\s]+" type="text" class="form-control" id="apellido" name="apellido">
                     </div>
                     <div id="curp">
                         <label for="curp">CURP</label>
                         <div class="input-group">
-                            <input id="curp" name="curp" class="form-control" pattern="[A-Z]{4}[0-9]{6}[A-Z]{6}[0-9]{2}" type="text">
+                            <input id="curp" name="curp" class="form-control" pattern="[A-Z]{4}[0-9]{6}[A-Z]{6}[0-9]{2}"
+                                   type="text">
                             <button class="btn btn-primary pull-right" id="buscar">Buscar</button>
                         </div>
                     </div>
@@ -54,7 +64,8 @@
                     </div>
                     <label for="nacionalidad">Nacionalidad</label>
                     <div class="input-group">
-                        <input name="nacionalidad" type="text" class="form-control" id="nacionalidad" pattern="[A-ZÁÉÍÓÚ]">
+                        <input name="nacionalidad" type="text" class="form-control" id="nacionalidad"
+                               pattern="[A-ZÁÉÍÓÚ]">
                     </div>
                     <br><span class="h4">Domicilio Completo</span><br>
                     <label for="pais">País</label>
@@ -368,7 +379,6 @@
                 </fieldset>
 
 
-
                 <fieldset class="form-group pagina1 hidden">
                     <label for="enf">Alergia a Medicamentos:</label><br>
                     <div class="input-group">
@@ -395,7 +405,7 @@
                         <label for="emb">Embarazo/lactancia:</label>
                         <div class="input-group">
                             <select class="form-control" id="emb" name="embarazo">
-                                <option value="n" selected >Ninguno</option>
+                                <option value="n" selected>Ninguno</option>
                                 <option value="e">Embarazo</option>
                                 <option value="l">Lactancia</option>
                             </select>
