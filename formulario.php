@@ -24,7 +24,7 @@
             <h2 id="titulo">Datos Generales</h2>
         </div>
         <div class="panel-body">
-            <form id="formulario" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+            <form id="formulario" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" novalidate>
 
 
                 <fieldset class="form-group pagina0">
@@ -39,10 +39,10 @@
                     <label>Sexo</label>
                     <div class="input-group">
                         <div class="radio">
-                            <label class="radio-inline"><input type="radio" name="generoMasculino">Masculino</label>
+                            <label class="radio-inline"><input type="radio" id="m" name="genero">Masculino</label>
                         </div>
                         <div class="radio">
-                            <label class="radio-inline"><input type="radio" name="generoFemenino">Femenino</label>
+                            <label class="radio-inline"><input type="radio" id="f" name="genero">Femenino</label>
                         </div>
                     </div>
                     <label for="nacionalidad">Nacionalidad</label>
@@ -372,26 +372,29 @@
                             <label class="radio-inline"><input type="radio" name="alerg" id="0">No</label>
                         </div>
                     </div>
-                    <div id="alergia" style="display:none"><input type="text" placeholder="Favor de indicar alergias" name="alerg"></div>
+                    <div id="alergia" style="display: none" class="input-group">
+                        <input type="text" placeholder="Favor de indicar alergias" name="alerg"></div>
 
                     <label for="enf">Enfermedad:</label>
                     <div class="input-group">
                         <select class="form-control" id="enf" name="enfermedad">
                             <option value="" selected="selected">- seleccione -</option>
-                            <option>Diabetes</option>
-                            <option>Hipertensión</option>
-                            <option>Asma</option>
+                            <option value="d">Diabetes</option>
+                            <option value="h">Hipertensión</option>
+                            <option value="a">Asma</option>
                         </select>
+                    </div>
+                    <div id="emblact">
+                        <label for="emb">Embarazo/lactancia:</label>
+                        <div class="input-group">
+                            <select class="form-control" id="emb" name="embarazo">
+                                <option value="n" selected >Ninguno</option>
+                                <option value="e">Embarazo</option>
+                                <option value="l">Lactancia</option>
+                            </select>
+                        </div>
                     </div>
 
-                    <label for="emb">Embarazo/lactancia:</label>
-                    <div class="input-group">
-                        <select class="form-control" id="emb" name="embarazo">
-                            <option value="" selected="selected">- seleccione -</option>
-                            <option>Embarazo</option>
-                            <option>Lactancia</option>
-                        </select>
-                    </div>
                 </fieldset>
 
 
@@ -408,8 +411,7 @@
                     <!-- opcion 1	 -->
                     <label for="medicamento">Medicamento solicitado</label>
                     <div class="input-group">
-                        <select class="form-control" id="medicamento" name="medicamento">
-                            <option value="" selected="selected" disabled> a. Diabetes</option>
+                        <select class="form-control" id="diabetes" name="diabMed">
                             <option value="1">Glucopha</option>
                             <option value="2">Insulina</option>
                         </select>
@@ -417,8 +419,7 @@
 
                     <!-- opcion 2	 -->
                     <div class="input-group">
-                        <select class="form-control" id="medic" name="medicamento">
-                            <option value="" selected="selected" disabled> b. Hipertensión</option>
+                        <select class="form-control" id="hipert" name="hipertMed">
                             <option value="1">Clorotiacida</option>
                             <option value="2">Hidroclorotiacida</option>
                         </select>
@@ -426,8 +427,7 @@
 
                     <!-- opcion 3 -->
                     <div class="input-group">
-                        <select class="form-control" id="medic" name="medicamento">
-                            <option value="" selected="selected" disabled> c. Asma</option>
+                        <select class="form-control" id="asma" name="asmaMed">
                             <option value="1">Albutero</option>
                             <option value="2">Sambutamol</option>
                         </select>
@@ -448,7 +448,7 @@
 
             <button class="btn btn-primary pull-right" id="siguiente">Siguiente</button>
             <button class="pull-left btn btn-primary hidden" id="anterior">Anterior</button>
-            <button class="btn btn-primary pull-right hidden" id="guardar">Guardar</button>
+            <button form="formulario" class="btn btn-primary pull-right hidden" id="guardar">Guardar</button>
         </div>
     </div>
 </div>
